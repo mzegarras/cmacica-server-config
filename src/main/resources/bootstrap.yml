@@ -1,0 +1,26 @@
+server:
+  port: 8888
+
+logging.level:
+  root: INFO
+  org.springframework.cloud.config: INFO
+
+    
+spring:
+  application:
+    name: configurations
+  cloud:
+    config:
+      server:
+        health:
+          enabled: false
+        encrypt:
+          enabled: true
+          key: 1234123423www
+        git:
+          searchPaths: '{application}'
+          uri: https://github.com/mzegarras/cmacica-config.git
+          #force-pull: true
+          username: trolley
+          password: strongpassword
+
