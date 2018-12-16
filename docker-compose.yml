@@ -1,0 +1,13 @@
+version: '3'
+services:
+  config:
+    image: "mzegarra/config-server"
+    build:
+      context: .
+      dockerfile: ./src/main/docker/Dockerfile
+    environment:
+      SERVER_GIT_URI: https://github.com/mzegarras/cmacica-config.git
+      SERVER_GIT_USER:
+      SERVER_GIT_PASSWORD:
+    ports:
+      - 8888:888

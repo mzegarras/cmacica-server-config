@@ -16,11 +16,12 @@ spring:
           enabled: false
         encrypt:
           enabled: true
-          key: 1234123423www
+
+
         git:
           searchPaths: '{application}'
-          uri: https://github.com/mzegarras/cmacica-config.git
-          #force-pull: true
-          username: trolley
-          password: strongpassword
+          uri: ${SERVER_GIT_URI:""}
+          force-pull: true
+          username: ${SERVER_GIT_USER:""}
+          password: ${SERVER_GIT_PASSWORD:""}
 
